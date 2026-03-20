@@ -6,7 +6,7 @@ import { cn } from '../../utils/cn';
 const testimonials = [
   {
     id: 1,
-    name: "Dr. Samuel Tadesse",
+    name: "Mr. Belayneh Yohanns",
     role: "Head of Agro Economics, Mekdela Amba University",
     image: "https://picsum.photos/seed/prof1/150/150",
     text: "Abriham is one of the most analytical and creative students I've had the pleasure of teaching. His ability to take complex econometric models and present them visually is truly exceptional."
