@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-primary: #0B4F3A;
+  --color-primary-light: #127A5A;
+  --color-primary-dark: #063325;
+  
+  --color-secondary: #C6A13B;
+  --color-secondary-light: #D4B65B;
+  --color-secondary-dark: #A3822B;
+  
+  --color-accent: #8B5CF6;
+  --color-accent-blue: #3B82F6;
+
+  --color-bg-dark: var(--theme-bg-dark);
+  --color-bg-light: var(--theme-bg-light);
+  
+  --color-text-dark: var(--theme-text-dark);
+  --color-text-light: var(--theme-text-light);
+
+  --color-white: var(--theme-white);
+  --color-gray-300: var(--theme-gray-300);
+  --color-gray-400: var(--theme-gray-400);
+  --color-gray-500: var(--theme-gray-500);
+  --color-gray-800: var(--theme-gray-800);
+  
+  --color-always-white: #ffffff;
+}
+
+:root {
+  --theme-bg-dark: #050505;
+  --theme-bg-light: #F9FAFB;
+  --theme-text-dark: #F3F4F6;
+  --theme-text-light: #111827;
+  
+  --theme-white: #ffffff;
+  --theme-gray-300: #d1d5db;
+  --theme-gray-400: #9ca3af;
+  --theme-gray-500: #6b7280;
+  --theme-gray-800: #1f2937;
+}
+
+.light-mode {
+  --theme-bg-dark: #F9FAFB;
+  --theme-bg-light: #050505;
+  --theme-text-dark: #111827;
+  --theme-text-light: #F3F4F6;
+  
+  --theme-white: #000000;
+  --theme-gray-300: #374151;
+  --theme-gray-400: #4b5563;
+  --theme-gray-500: #6b7280;
+  --theme-gray-800: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-dark font-sans antialiased selection:bg-secondary selection:text-always-white transition-colors duration-300;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-light;
+}
+
+/* Hide scrollbar for clean horizontal scrolls */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
