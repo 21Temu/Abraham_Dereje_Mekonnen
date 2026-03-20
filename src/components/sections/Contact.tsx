@@ -26,7 +26,7 @@ Message:
 ${data.message}`;
 
     // Create the mailto link
-    const mailtoLink = `mailto:temuclassic986@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:mekonnenabraham1993@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(body)}`;
     
     // Open the default email client
     window.location.href = mailtoLink;
