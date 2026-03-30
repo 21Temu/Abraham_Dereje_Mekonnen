@@ -12,6 +12,7 @@ import DataVisualization from './components/sections/DataVisualization';
 import Testimonials from './components/sections/Testimonials';
 import BlogInsights from './components/sections/BlogInsights';
 import AwardsCertifications from './components/sections/AwardsCertifications';
+import CertificateFilesCarousel from './components/sections/CertificateFilesCarousel'; // 👈 ADD THIS
 import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
 import CustomCursor from './components/ui/CustomCursor';
@@ -84,6 +85,7 @@ export default function App() {
               <InteractiveProjects />
               <Testimonials />
               <AwardsCertifications />
+              <CertificateFilesCarousel /> {/* 👈 ADD THIS HERE */}
               <Contact />
             </main>
             <Footer />
