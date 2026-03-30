@@ -13,7 +13,6 @@ import Testimonials from './components/sections/Testimonials';
 import BlogInsights from './components/sections/BlogInsights';
 import AwardsCertifications from './components/sections/AwardsCertifications';
 import Contact from './components/sections/Contact';
-import CustomCursor from './components/ui/CustomCursor';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +27,6 @@ export default function App() {
 
   return (
     <>
-      <CustomCursor />
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div
