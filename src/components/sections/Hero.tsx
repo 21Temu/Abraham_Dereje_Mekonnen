@@ -138,7 +138,7 @@ export default function Hero() {
             <div className="absolute inset-8 rounded-full overflow-hidden bg-gradient-to-br from-primary-dark to-primary border border-white/10 p-2">
   <div className="w-full h-full rounded-full overflow-hidden bg-gray-800 relative group">
     <img
-      src="/abre.png"
+      src="/abre.JPG"
       alt="Abriham Dereje"
       className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-700"
       referrerPolicy="no-referrer"
