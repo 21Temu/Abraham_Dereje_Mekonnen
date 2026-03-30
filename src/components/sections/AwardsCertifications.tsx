@@ -89,7 +89,7 @@ export default function CertificateFilesCarousel() {
 
   return (
     <>
-      <section id="Certifications" className="py-24 relative bg-bg-dark/50 border-y border-white/5">
+      <section id="certifications" className="py-24 relative bg-bg-dark/50 border-y border-white/5">
         <div className="container mx-auto px-6 md:px-12">
           {/* Header */}
           <div className="flex flex-col items-center text-center mb-12">
