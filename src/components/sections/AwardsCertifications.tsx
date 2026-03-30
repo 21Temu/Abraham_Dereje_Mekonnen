@@ -28,10 +28,12 @@ const certificateFiles = [
   { name: "How to Evaluate Resources (2)", type: "pdf" }
 ];
 
-// Function to clean filename for URL
+// FIXED: Function to get correct file URL
 const getFileUrl = (fileName: string, type: string) => {
-  const cleanName = fileName.replace(/[()]/g, '').replace(/\s+/g, ' ').trim();
-  return `/certificates/${encodeURIComponent(fileName)}.${type}`;
+  // Keep the original filename with parentheses for the actual file
+  // The file in public/certificates/ should have the exact name with .pdf extension
+  const fileWithExtension = `${fileName}.${type}`;
+  return `/certificates/${encodeURIComponent(fileWithExtension)}`;
 };
 
 // Function to get display name (remove numbers in parentheses)
@@ -53,13 +55,9 @@ export default function CertificateFilesCarousel() {
     }
   };
 
-  const openFile = (file: typeof certificateFiles[0], index: number) => {
+  const openFile = (file: typeof certificateFiles[0]) => {
     const url = getFileUrl(file.name, file.type);
-    if (file.type === 'pdf') {
-      window.open(url, '_blank');
-    } else {
-      window.open(url, '_blank');
-    }
+    window.open(url, '_blank');
   };
 
   return (
@@ -124,7 +122,7 @@ export default function CertificateFilesCarousel() {
             className="flex overflow-x-auto gap-6 pb-8 scrollbar-hide"
             style={{
               scrollbarWidth: 'thin',
-              scrollbarColor: '#10b981 '#1f2937'
+              scrollbarColor: '#10b981 #1f2937'
             }}
           >
             <style>
@@ -156,7 +154,7 @@ export default function CertificateFilesCarousel() {
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
                 onMouseEnter={() => setHoveredId(index)}
                 onMouseLeave={() => setHoveredId(null)}
-                onClick={() => openFile(file, index)}
+                onClick={() => openFile(file)}
                 className="flex-shrink-0 w-72 cursor-pointer"
               >
                 <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group/card h-full flex flex-col">
