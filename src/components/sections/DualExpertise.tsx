@@ -2,20 +2,20 @@ import { motion } from 'motion/react';
 import { LineChart, PenTool, Database, Layout, FileText, Image as ImageIcon } from 'lucide-react';
 
 const economicsSkills = [
-  { name: 'Agricultural Economics', value: 95 },
-  { name: 'Microeconomics', value: 90 },
-  { name: 'Macroeconomics', value: 88 },
-  { name: 'Econometrics', value: 85 },
-  { name: 'Research Methodology', value: 92 },
-  { name: 'Data Analysis (SPSS/STATA)', value: 87 },
+  { name: 'Agricultural Economics', value: 100 },
+  { name: 'Microeconomics', value: 100 },
+  { name: 'Macroeconomics', value: 100 },
+  { name: 'Econometrics', value: 100 },
+  { name: 'Research Methodology', value: 100 },
+  { name: 'Data Analysis (SPSS/STATA)', value: 100 },
 ];
 
 const designSkills = [
-  { name: 'Adobe Photoshop', value: 90 },
-  { name: 'Adobe Illustrator', value: 85 },
-  { name: 'Adobe InDesign', value: 80 },
-  { name: 'Figma', value: 88 },
-  { name: 'Canva', value: 95 },
+  { name: 'Adobe Photoshop', value: 100 },
+  { name: 'Adobe Illustrator', value: 100 },
+  { name: 'Adobe InDesign', value: 100 },
+  { name: 'Figma', value: 100 },
+  { name: 'Canva', value: 100 },
 ];
 
 export default function DualExpertise() {
